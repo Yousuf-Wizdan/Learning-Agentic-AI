@@ -107,7 +107,7 @@ message_history.append({"role" : "user" , "content" : user_input})
 
 while True:
     response = client.chat.completions.create(
-        model="mistral-large-latest",
+        model="mistral-small-latest",
         response_format={"type":"json_object"},
         messages=message_history
     )
@@ -143,6 +143,17 @@ print("\n\n\n")
 # 🧠 First compute the division: 5 / 10 = 0.5.
 # 🧠 Next compute the multiplication: 2 * 10 = 20.
 # ✅ The result of 2 + 5 / 10 - 2 * 10 is -17.5.
+
+# 👉 What is 102 + 123 / 105 * 231 / 22 * 1 - 2
+# 🧠 Interpret the arithmetic expression using order of operations (PEMDAS/BODMAS).
+# 🧠 Identify the operations in the expression: 102 + (123 / 105) * 231 / 22 * 1 - 2.
+# 🧠 Compute division: 123 / 105 ≈ 1.17142857.
+# 🧠 Multiply the result by 231: 1.17142857 * 231 ≈ 270.628571.
+# 🧠 Divide the result by 22: 270.628571 / 22 ≈ 12.3012987.
+# 🧠 Multiply the result by 1: 12.3012987 * 1 = 12.3012987.
+# 🧠 Add 102 to the result: 102 + 12.3012987 ≈ 114.3012987.
+# 🧠 Subtract 2 from the result: 114.3012987 - 2 ≈ 112.3012987.
+# ✅ The answer is approximately 112.3013.
 
     
     
